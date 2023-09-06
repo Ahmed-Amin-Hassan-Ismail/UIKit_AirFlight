@@ -13,6 +13,7 @@
 		AC5D4F942AA8E68000269B93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC5D4F922AA8E68000269B93 /* Main.storyboard */; };
 		AC5D4F962AA8E68100269B93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC5D4F952AA8E68100269B93 /* Assets.xcassets */; };
 		AC5D4F992AA8E68100269B93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC5D4F972AA8E68100269B93 /* LaunchScreen.storyboard */; };
+		AC5D4FA12AA912E900269B93 /* LoginStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5D4FA02AA912E900269B93 /* LoginStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		AC5D4F952AA8E68100269B93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC5D4F982AA8E68100269B93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC5D4F9A2AA8E68100269B93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC5D4FA02AA912E900269B93 /* LoginStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				AC5D4F8C2AA8E68000269B93 /* AppDelegate.swift */,
 				AC5D4F8E2AA8E68000269B93 /* SceneDelegate.swift */,
 				AC5D4F902AA8E68000269B93 /* LoginViewController.swift */,
+				AC5D4FA02AA912E900269B93 /* LoginStatus.swift */,
 				AC5D4F922AA8E68000269B93 /* Main.storyboard */,
 				AC5D4F952AA8E68100269B93 /* Assets.xcassets */,
 				AC5D4F972AA8E68100269B93 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC5D4F912AA8E68000269B93 /* LoginViewController.swift in Sources */,
+				AC5D4FA12AA912E900269B93 /* LoginStatus.swift in Sources */,
 				AC5D4F8D2AA8E68000269B93 /* AppDelegate.swift in Sources */,
 				AC5D4F8F2AA8E68000269B93 /* SceneDelegate.swift in Sources */,
 			);
