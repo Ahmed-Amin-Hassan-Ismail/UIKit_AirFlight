@@ -1,24 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="AirFlight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EGc-W9-CVI">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-sunny" translatesAutoresizingMaskIntoConstraints="NO" id="LxE-03-CP9">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-sunny-cloud-1" translatesAutoresizingMaskIntoConstraints="NO" id="P0P-sO-GcJ">
+                                        <rect key="frame" x="0.0" y="100" width="159" height="50"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-sunny-cloud-2" translatesAutoresizingMaskIntoConstraints="NO" id="50O-lv-Wbc">
+                                        <rect key="frame" x="235" y="150" width="138" height="49"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-sunny-cloud-3" translatesAutoresizingMaskIntoConstraints="NO" id="Zjt-ua-DUP">
+                                        <rect key="frame" x="20" y="500" width="74" height="35"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-sunny-cloud-3" translatesAutoresizingMaskIntoConstraints="NO" id="pyK-hx-rLc">
+                                        <rect key="frame" x="289" y="549" width="74" height="35"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check Your Flight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ztx-3e-KN9">
+                                        <rect key="frame" x="94" y="200" width="205" height="23.333333333333343"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bsI-eX-D8k">
+                                        <rect key="frame" x="60" y="253.33333333333337" width="273" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="7j3-hT-evx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0h3-ol-nRg">
+                                        <rect key="frame" x="60" y="323.33333333333331" width="273" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="0YN-8b-ixp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VrJ-nj-Lnk">
+                                        <rect key="frame" x="96.666666666666686" y="413.33333333333331" width="200" height="48"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="il5-uW-a8Z"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="jQt-eh-Glz"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Login">
+                                            <fontDescription key="titleFontDescription" name="Menlo-Bold" family="Menlo" pointSize="16"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F03-xW-3JL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="50O-lv-Wbc" secondAttribute="trailing" constant="20" id="3g8-37-eE9"/>
+                                    <constraint firstItem="Ztx-3e-KN9" firstAttribute="centerX" secondItem="EGc-W9-CVI" secondAttribute="centerX" id="66X-dO-ERY"/>
+                                    <constraint firstItem="VrJ-nj-Lnk" firstAttribute="centerX" secondItem="EGc-W9-CVI" secondAttribute="centerX" id="Au2-xO-7oF"/>
+                                    <constraint firstItem="Zjt-ua-DUP" firstAttribute="top" secondItem="P0P-sO-GcJ" secondAttribute="bottom" constant="350" id="BX6-hQ-9U6"/>
+                                    <constraint firstAttribute="trailing" secondItem="bsI-eX-D8k" secondAttribute="trailing" constant="60" id="Bty-ZR-BnT"/>
+                                    <constraint firstAttribute="trailing" secondItem="pyK-hx-rLc" secondAttribute="trailing" constant="30" id="Giz-Ra-oz4"/>
+                                    <constraint firstItem="bsI-eX-D8k" firstAttribute="leading" secondItem="EGc-W9-CVI" secondAttribute="leading" constant="60" id="PK2-Hp-KaX"/>
+                                    <constraint firstItem="LxE-03-CP9" firstAttribute="leading" secondItem="EGc-W9-CVI" secondAttribute="leading" id="W7h-8t-afz"/>
+                                    <constraint firstItem="P0P-sO-GcJ" firstAttribute="leading" secondItem="EGc-W9-CVI" secondAttribute="leading" id="XKD-V9-Shl"/>
+                                    <constraint firstItem="0h3-ol-nRg" firstAttribute="top" secondItem="bsI-eX-D8k" secondAttribute="bottom" constant="30" id="ZQC-ez-odz"/>
+                                    <constraint firstItem="0h3-ol-nRg" firstAttribute="trailing" secondItem="bsI-eX-D8k" secondAttribute="trailing" id="ZbU-KL-Jeo"/>
+                                    <constraint firstAttribute="bottom" secondItem="LxE-03-CP9" secondAttribute="bottom" id="Zmh-GM-rHy"/>
+                                    <constraint firstItem="LxE-03-CP9" firstAttribute="top" secondItem="EGc-W9-CVI" secondAttribute="top" id="aub-JE-oeE"/>
+                                    <constraint firstItem="50O-lv-Wbc" firstAttribute="top" secondItem="EGc-W9-CVI" secondAttribute="top" constant="150" id="bK8-Wy-vtI"/>
+                                    <constraint firstAttribute="trailing" secondItem="LxE-03-CP9" secondAttribute="trailing" id="caO-c2-mPa"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="VrJ-nj-Lnk" secondAttribute="bottom" constant="100" id="dBM-Fs-2Go"/>
+                                    <constraint firstItem="bsI-eX-D8k" firstAttribute="top" secondItem="Ztx-3e-KN9" secondAttribute="bottom" constant="30" id="e3a-5g-FJx"/>
+                                    <constraint firstItem="Zjt-ua-DUP" firstAttribute="leading" secondItem="EGc-W9-CVI" secondAttribute="leading" constant="20" id="eWY-Lc-VkE"/>
+                                    <constraint firstItem="VrJ-nj-Lnk" firstAttribute="top" secondItem="0h3-ol-nRg" secondAttribute="bottom" constant="50" id="f9B-rX-f1u"/>
+                                    <constraint firstItem="0h3-ol-nRg" firstAttribute="leading" secondItem="bsI-eX-D8k" secondAttribute="leading" id="gBO-mf-IDm"/>
+                                    <constraint firstItem="Ztx-3e-KN9" firstAttribute="top" secondItem="EGc-W9-CVI" secondAttribute="top" constant="200" id="t5z-lJ-tDl"/>
+                                    <constraint firstItem="P0P-sO-GcJ" firstAttribute="top" secondItem="EGc-W9-CVI" secondAttribute="top" constant="100" id="ycB-Qc-Y5k"/>
+                                    <constraint firstItem="pyK-hx-rLc" firstAttribute="top" secondItem="50O-lv-Wbc" secondAttribute="bottom" constant="350" id="z8f-By-GIz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="EGc-W9-CVI" secondAttribute="bottom" id="Y8g-RN-Ghy"/>
+                            <constraint firstItem="EGc-W9-CVI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bI5-Zl-pbM"/>
+                            <constraint firstAttribute="trailing" secondItem="EGc-W9-CVI" secondAttribute="trailing" id="e5W-P9-n8e"/>
+                            <constraint firstItem="EGc-W9-CVI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wcL-gI-L8B"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cloud1" destination="P0P-sO-GcJ" id="Ny7-Ga-IAb"/>
+                        <outlet property="cloud2" destination="50O-lv-Wbc" id="nfF-Az-TRL"/>
+                        <outlet property="cloud3" destination="Zjt-ua-DUP" id="ilz-ZP-i8E"/>
+                        <outlet property="cloud4" destination="pyK-hx-rLc" id="nTr-CB-6qc"/>
+                        <outlet property="loginButton" destination="VrJ-nj-Lnk" id="niN-GP-3dp"/>
+                        <outlet property="passwordTextField" destination="0h3-ol-nRg" id="8TQ-Ba-E8l"/>
+                        <outlet property="usernameTextField" destination="bsI-eX-D8k" id="tGd-0k-i2F"/>
+                        <outlet property="welcomLabel" destination="Ztx-3e-KN9" id="r6Q-Gl-Zwe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="113" y="-2"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg-sunny" width="213.33332824707031" height="378.66665649414062"/>
+        <image name="bg-sunny-cloud-1" width="159" height="50"/>
+        <image name="bg-sunny-cloud-2" width="138" height="49"/>
+        <image name="bg-sunny-cloud-3" width="74" height="35"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
