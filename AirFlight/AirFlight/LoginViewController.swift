@@ -12,7 +12,7 @@ class LoginViewController: UIViewController {
     // MARK: - Properties
     
     private let spinner = UIActivityIndicatorView(style: .large)
-    private let loginStatus = LoginStatus.connecting
+    private let loginStatus: [String] = LoginStatus.allCases.map( { $0.rawValue })
     
     // MARK: - IBOutles
     
@@ -60,7 +60,7 @@ class LoginViewController: UIViewController {
     @IBAction func loginPressed(_ sender: Any) {
         view.endEditing(true)
         
-        UIView.animate(withDuration: 1.5, delay: 0.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.0, animations: {
+        UIView.animate(withDuration: 0.7, delay: 0.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.0, animations: {
             
             self.loginButton.center.y += 60
             self.loginButton.bounds.size.width  += 60
@@ -74,6 +74,7 @@ class LoginViewController: UIViewController {
             
         }, completion: { _ in
             
+            self.showMessage(index: 0)
             
         })
     }
@@ -134,6 +135,62 @@ extension LoginViewController {
         
         UIView.animate(withDuration: 1.5, delay: 0, animations: {
             cloud.alpha = 1.0
+        })
+    }
+    
+    private func showMessage(index: Int) {
+        
+        statusLabel.text = loginStatus[index]
+        
+        UIView.transition(with: bannerView, duration: 0.7, options: [.transitionCurlDown], animations: {
+            
+            self.bannerView.isHidden = false
+            
+        }, completion: { _ in
+            
+            self.removeMessage(index: index)
+           
+        })
+    }
+    
+    private func removeMessage(index: Int) {
+        
+        UIView.animate(withDuration: 0.7, delay: 2.0, options: .curveEaseIn, animations: {
+            
+            self.bannerView.center.x += self.view.frame.size.width
+            
+        }, completion: { _ in
+            
+           let statusIndex = index + 1
+            
+            if statusIndex < self.loginStatus.count {
+                
+                self.bannerView.center.x -= self.view.frame.size.width
+                self.bannerView.isHidden = true
+                self.showMessage(index: statusIndex)
+                
+            } else {
+                
+                self.resetLoginButtonAnimation()
+            }
+        })
+    }
+    
+    private func resetLoginButtonAnimation() {
+        
+        UIView.animate(withDuration: 1.0, delay: 0.0, animations: {
+            
+            self.bannerView.isHidden = true
+            self.spinner.alpha = 0.0
+            self.spinner.frame = CGRect(x: -20.0, y: 6.0, width: 20.0, height: 20.0)
+            self.loginButton.center.y -= 60
+            self.loginButton.bounds.size.width  -= 60
+            self.topButtonConstraints.constant -= 60
+            self.buttonWidthConstraints.constant -= 60
+            self.loginButton.backgroundColor = .red
+            
+        }, completion: { _ in
+            // navigate to flight screen
         })
     }
 }

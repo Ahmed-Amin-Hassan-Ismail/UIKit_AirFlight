@@ -35,8 +35,8 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-sunny-cloud-3" translatesAutoresizingMaskIntoConstraints="NO" id="pyK-hx-rLc">
                                         <rect key="frame" x="289" y="549" width="74" height="35"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check Your Flight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ztx-3e-KN9">
-                                        <rect key="frame" x="94" y="200" width="205" height="23.333333333333343"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check Your Trip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ztx-3e-KN9">
+                                        <rect key="frame" x="106.33333333333333" y="200" width="180.66666666666669" height="23.333333333333343"/>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -79,14 +79,14 @@
                                         </connections>
                                     </button>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z0v-WE-ZW0">
-                                        <rect key="frame" x="50" y="413.33333333333331" width="293" height="50"/>
+                                        <rect key="frame" x="50" y="393.33333333333331" width="293" height="50"/>
                                         <subviews>
-                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner" translatesAutoresizingMaskIntoConstraints="NO" id="5IM-1f-b5L">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner" translatesAutoresizingMaskIntoConstraints="NO" id="5IM-1f-b5L">
                                                 <rect key="frame" x="0.0" y="0.0" width="293" height="50"/>
                                             </imageView>
-                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kqh-3d-G6r">
-                                                <rect key="frame" x="116.33333333333333" y="13.333333333333369" width="60.333333333333329" height="23.333333333333329"/>
-                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kqh-3d-G6r">
+                                                <rect key="frame" x="126.66666666666666" y="10" width="40" height="30"/>
+                                                <fontDescription key="fontDescription" name="MuktaMahee-Regular" family="Mukta Mahee" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -125,7 +125,7 @@
                                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="VrJ-nj-Lnk" secondAttribute="bottom" constant="100" id="dBM-Fs-2Go"/>
                                     <constraint firstItem="bsI-eX-D8k" firstAttribute="top" secondItem="Ztx-3e-KN9" secondAttribute="bottom" constant="30" id="e3a-5g-FJx"/>
                                     <constraint firstItem="Zjt-ua-DUP" firstAttribute="leading" secondItem="EGc-W9-CVI" secondAttribute="leading" constant="20" id="eWY-Lc-VkE"/>
-                                    <constraint firstItem="Z0v-WE-ZW0" firstAttribute="top" secondItem="0h3-ol-nRg" secondAttribute="bottom" constant="50" id="efl-vE-iM2"/>
+                                    <constraint firstItem="Z0v-WE-ZW0" firstAttribute="top" secondItem="0h3-ol-nRg" secondAttribute="bottom" constant="30" id="efl-vE-iM2"/>
                                     <constraint firstItem="VrJ-nj-Lnk" firstAttribute="top" secondItem="0h3-ol-nRg" secondAttribute="bottom" constant="50" id="f9B-rX-f1u"/>
                                     <constraint firstItem="0h3-ol-nRg" firstAttribute="leading" secondItem="bsI-eX-D8k" secondAttribute="leading" id="gBO-mf-IDm"/>
                                     <constraint firstItem="Ztx-3e-KN9" firstAttribute="top" secondItem="EGc-W9-CVI" secondAttribute="top" constant="200" id="t5z-lJ-tDl"/>
