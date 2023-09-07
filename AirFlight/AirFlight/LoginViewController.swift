@@ -16,6 +16,7 @@ class LoginViewController: UIViewController {
     
     // MARK: - IBOutles
     
+    @IBOutlet weak var tripView: TripView!
     @IBOutlet weak var cloud1: UIImageView!
     @IBOutlet weak var cloud2: UIImageView!
     @IBOutlet weak var cloud3: UIImageView!
@@ -190,7 +191,19 @@ extension LoginViewController {
             self.loginButton.backgroundColor = .red
             
         }, completion: { _ in
-            // navigate to flight screen
+            
+            // show to trip view
+            
+            UIView.transition(with: self.tripView, duration: 1.0, options: [.transitionFlipFromLeft], animations: {
+                
+                self.tripView.isHidden = false
+                
+            }, completion: { _ in
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
+                    self.tripView.startAnimate()
+                })
+            })
+            
         })
     }
 }
